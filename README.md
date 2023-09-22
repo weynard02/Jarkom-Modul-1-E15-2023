@@ -107,12 +107,53 @@ NWltcGxlUGFzNXdvcmQ=
 ## 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
 ## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
+Kita bisa mencari paket-paket destinationnya dengan display filter 
+```
+ip.dst == 184.87.193.88
+```
+atau langsung menggunakan fitur Statistics sehingga didapatkan **6** paket
+![Screenshot 2023-09-18 190733](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/407164e3-1cd4-4077-9331-71096b3cf8b7)
+
+### Capture Flag:
+![Screenshot 2023-09-18 194158](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/43e8b074-58e3-4b7d-85a0-bff9dcab1d66)
+
 
 ## 8. Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+Ada lebih dari satu port yaitu tcp.port dan udp.port sehingga kita bisa mencari keduanya dengan filter:
+```
+tcp.dstport == 80 || udp.dstport == 80
+```
+Note: `dstport` = menuju port (destination)
+![Screenshot 2023-09-18 192740](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/78afc764-a946-4f90-ae9c-dd37d389d674)
+
+### Capture Flag:
+![Screenshot 2023-09-18 194052](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/37c50fdc-398e-4893-91c2-29113badfce4)
+
 
 ## 9. Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
 ## 10. Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+Kita bisa melakukan filter `telnet` pada pcap
+![Screenshot 2023-09-18 195758](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/8566e715-aec0-414e-933a-c482e335edf2)
 
+Kemudian ditemukan jawaban [username]:[password] yang berada di paket 81. Untuk lebih jelasnya, dapat difollow TCP Stream
+![Screenshot 2023-09-18 215611](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/46fb7a48-f3cd-464f-ae24-5bb136e92c20)
+
+Jawaban: **dhafin:kesayangannyak0k0**
+
+### Capture Flag:
+![Screenshot 2023-09-18 195712](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b0cfe3b3-eb1b-457f-9176-5afb3372ebcd)
+
+## Kendala:
+- Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal)
+- Untuk soal 10, ada banyak kombinasi yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar.
+  
+  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/a26003a0-8f90-4160-884a-9529ae5a6e6a)
+
+  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/25d062a0-21e3-4055-9c8f-cd280faeedc4)
+
+  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/1ece2824-607e-4420-9b3f-82ab54e3814c)
+
+  dan lain sebagainya.
 
 
