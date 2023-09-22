@@ -41,13 +41,14 @@ Dalam konteks ini, kita dapat mengidentifikasi aktivitas pengguna dengan melihat
   ```258040696```
  
 ## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
-Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Komputer, kita dapat menggunakan filter ```ip.addr == 10.21.78.111``` dalam file soal2. Filter ini digunakan untuk mengambil atau menampilkan paket-paket yang memiliki alamat IP tujuan atau sumber yang sesuai dengan alamat IP yang diberikan, dalam hal ini 10.21.78.111 (alamat ip portal praktikum Jaringan Komputer). Setelah itu, langkah berikutnya adalah mengklik kanan pada paket tersebut, lalu memilih opsi "Follow" dan memilih "TCP Stream". Ini akan membuka tampilan yang menunjukkan request yang telah terjadi, seperti yang diilustrasikan di bawah ini. Di sini, kita dapat melihat rincian server yang digunakan. Rincian ini tersedia di bawah ini.
+Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Komputer, kita dapat menggunakan filter ```ip.addr == 10.21.78.111``` dalam file soal2. Filter ini digunakan untuk mengambil atau menampilkan paket-paket yang memiliki alamat IP tujuan atau sumber yang sesuai dengan alamat IP yang diberikan, dalam hal ini 10.21.78.111 (alamat ip portal praktikum Jaringan Komputer). Setelah itu, langkah berikutnya adalah mengklik kanan pada paket tersebut, lalu memilih opsi "Follow" dan memilih "TCP Stream". Ini akan membuka tampilan yang menunjukkan request yang telah terjadi, seperti yang diilustrasikan di bawah ini. Di sini, kita dapat melihat rincian server yang digunakan. Web server yang digunakan yaitu ```gunicorn```.
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 - Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
 - Protokol layer transport apa yang digunakan?
 
 ## 4. Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+Pada soal ini, kita perlu mencari paket ke-130 sesuai permintaan soal, lalu pada bagian “User Datagram Protocol” kita expand dan bisa kita dapatkan nilai checksumnya yaitu ```0x18e5```.
 
 ## 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 - Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
@@ -61,6 +62,18 @@ Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Kompu
 ## 8. Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ## 9. Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+Agar wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34, kita dapat menggunakan query filter yaitu 
+```ip.src == 10.51.40.1 && ip.dst != 10.39.55.34```
+
+#### Penjelasan :
+
+- ```ip.src == 10.51.40.1```: Ini akan mengambil semua paket yang memiliki alamat IP sumber (source IP address) 10.51.40.1.
+
+- ```&&```: Ini adalah operator logika "dan", yang digunakan untuk menggabungkan dua kondisi.
+
+- ```ip.dst != 10.39.55.34```: Ini akan memastikan bahwa alamat IP tujuan (destination IP address) bukan 10.39.55.34. Jadi, paket-paket yang memiliki alamat IP tujuan 10.39.55.34 akan diabaikan.
+
+Dengan menggunakan query ini, kita akan melihat hanya paket-paket yang berasal dari alamat 10.51.40.1 dan tidak menuju ke alamat 10.39.55.34.
 
 ## 10. Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
 
