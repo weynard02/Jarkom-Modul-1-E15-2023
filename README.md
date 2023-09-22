@@ -136,8 +136,9 @@ Note: `dstport` = menuju port (destination)
 Kita bisa melakukan filter `telnet` pada pcap
 ![Screenshot 2023-09-18 195758](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/8566e715-aec0-414e-933a-c482e335edf2)
 
-Kemudian ditemukan jawaban [username]:[password] yang berada di paket 81. Untuk lebih jelasnya, dapat difollow TCP Stream
+Kemudian ditemukan jawaban [username]:[password]. Untuk lebih jelasnya, dapat difollow TCP Stream
 ![Screenshot 2023-09-18 215611](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/46fb7a48-f3cd-464f-ae24-5bb136e92c20)
+![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/980b4ed7-4c21-4dd4-bad7-c1f2d0d3a8ae)
 
 Jawaban: **dhafin:kesayangannyak0k0**
 
@@ -146,14 +147,5 @@ Jawaban: **dhafin:kesayangannyak0k0**
 
 ## Kendala:
 - Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal)
-- Untuk soal 10, ada banyak kombinasi yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar.
-  
-  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/a26003a0-8f90-4160-884a-9529ae5a6e6a)
-
-  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/25d062a0-21e3-4055-9c8f-cd280faeedc4)
-
-  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/1ece2824-607e-4420-9b3f-82ab54e3814c)
-
-  dan lain sebagainya.
-
+- Untuk soal 10, ada banyak kombinasi yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial yang di-login
 
