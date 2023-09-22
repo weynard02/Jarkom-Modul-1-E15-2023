@@ -45,7 +45,7 @@ Dalam konteks ini, kita dapat mengidentifikasi aktivitas pengguna dengan melihat
   ```258040696```
   ![Screenshot (4406)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/87ef0234-f7f5-4a5e-97bd-e99b03b05e78)
 
-  ### Capture The Flag
+  ### Capture The Flag:
   ![Screenshot (4366)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/e77be3fe-cbff-4d42-8e69-8597b89db57f)
 
  
@@ -55,7 +55,7 @@ Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Kompu
 
 ![Screenshot (4363)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/e199420f-1073-42b9-8cda-a154f8b77761)
 
-### Capture The Flag
+### Capture The Flag:
 ![Screenshot (4364)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/beec2d65-0190-4026-b350-f917199764bd)
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
@@ -97,7 +97,7 @@ Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Kompu
 Pada soal ini, kita perlu mencari paket ke-130 sesuai permintaan soal, lalu pada bagian “User Datagram Protocol” kita expand dan bisa kita dapatkan nilai checksumnya yaitu ```0x18e5```.
 ![Screenshot (4368)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/50041560-433d-4c84-9d22-00807c8d93dd)
 
-### Capture The Flag
+### Capture The Flag:
 ![Screenshot (4369)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/8cc17932-dc86-4e66-ad9f-f3f38ce9e157)
 
 ## 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
@@ -153,7 +153,7 @@ Jadi, solusi kode error tersebut yaitu ```JDRNJA```.
 
 ![Screenshot (4403)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/54e72106-175d-463e-84ef-1a0665c06188)
 
-### Capture The Flag
+### Capture The Flag:
 ![Screenshot (4404)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/be305441-7c89-4470-b442-9099af43d317)
 
 ## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
@@ -198,7 +198,7 @@ Agar wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi 
 
 Dengan menggunakan query ini, kita akan melihat hanya paket-paket yang berasal dari alamat 10.51.40.1 dan tidak menuju ke alamat 10.39.55.34.
 
-### Capture The Flag
+### Capture The Flag:
 ![Screenshot (4371)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/67c3b2a9-c186-4950-ab1b-201e555e322a)
 
 ## 10. Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
