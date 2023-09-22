@@ -41,6 +41,7 @@ Dalam konteks ini, kita dapat mengidentifikasi aktivitas pengguna dengan melihat
   ```258040696```
  
 ## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Komputer, kita dapat menggunakan filter ```ip.addr == 10.21.78.111``` dalam file soal2. Filter ini digunakan untuk mengambil atau menampilkan paket-paket yang memiliki alamat IP tujuan atau sumber yang sesuai dengan alamat IP yang diberikan, dalam hal ini 10.21.78.111 (alamat ip portal praktikum Jaringan Komputer). Setelah itu, langkah berikutnya adalah mengklik kanan pada paket tersebut, lalu memilih opsi "Follow" dan memilih "TCP Stream". Ini akan membuka tampilan yang menunjukkan request yang telah terjadi, seperti yang diilustrasikan di bawah ini. Di sini, kita dapat melihat rincian server yang digunakan. Rincian ini tersedia di bawah ini.
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 - Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
