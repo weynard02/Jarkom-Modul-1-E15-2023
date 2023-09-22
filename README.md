@@ -31,7 +31,9 @@
   Untuk dapat menemukan paket-paket tersebut, kita bisa menggunakan display filter
   ```ip.dst == 239.255.255.250 && (tcp.port == 3702 || udp.port == 3702)```
   
-  Note:
+  Penjelasan:
+  - `ip.dst == 239.255.255.250` destination ip ke 239.255.255.250
+  - `&& (tcp.port == 3702 || udp.port == 3702)` dan port (tcp ataupun udp) merupakan 3702 
   - port dimiliki oleh tcp atau udp
   - Di sini lgsg menunjukan destination address 239.255.255.250 karena saat dicek source address `ip.src == 239.255.255.250` tidak ditemukan sebuah paket sehingga langsung menunjukkan `ip.dst` saja
     ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/0e036c0a-7bbc-4e5d-bfed-17d2f95b5779)
@@ -80,7 +82,7 @@ NWltcGxlUGFzNXdvcmQ=
 
   Akan tetapi, password itu perlu didecode terlebih dahulu (base64). Kita bisa memanfaatkan command Linux:
   ```
-    echo NWltcGxlUGFzNXdvcmQ= | bas64 --decode
+    echo NWltcGxlUGFzNXdvcmQ= | base64 --decode
   ```
    Sehingga didapatkan passwordnya `5implePas5word`\
    ![Screenshot 2023-09-18 211244](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b29d5fec-c5f5-404c-8e54-bb560d191e82)
@@ -98,7 +100,7 @@ NWltcGxlUGFzNXdvcmQ=
 - Port berapakah pada server yang digunakan untuk service SMTP?
   Port ke 25 untuk SMTP
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
-  Public IPnya adalah `74.53.140.153`
+  Satu-satunya public IP yang ditemukan dari pcap adalah `74.53.140.153`
 
   ### Capture Flag:
   ![Screenshot 2023-09-18 211451](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/efcf2755-40ba-4e8a-a454-4566c2c3e765)
@@ -111,6 +113,8 @@ Kita bisa mencari paket-paket destinationnya dengan display filter
 ```
 ip.dst == 184.87.193.88
 ```
+Penjelasan: destination ip ke 184.87.193.88
+
 atau langsung menggunakan fitur Statistics sehingga didapatkan **6** paket
 ![Screenshot 2023-09-18 190733](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/407164e3-1cd4-4077-9331-71096b3cf8b7)
 
@@ -123,7 +127,9 @@ Ada lebih dari satu port yaitu tcp.port dan udp.port sehingga kita bisa mencari 
 ```
 tcp.dstport == 80 || udp.dstport == 80
 ```
-Note: `dstport` = menuju port (destination)
+Penjelasan: 
+- `dstport` = menuju port (destination)
+- `||` merupakan "atau" karena kita mencari dari 2 jenis port == 80 yang ada
 ![Screenshot 2023-09-18 192740](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/78afc764-a946-4f90-ae9c-dd37d389d674)
 
 ### Capture Flag:
@@ -149,5 +155,4 @@ Jawaban: **dhafin:kesayangannyak0k0**
 
 ## Kendala:
 - Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal)
-- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial yang di-login
-
+- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial itu berada di pesan "Login..."
