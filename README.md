@@ -56,6 +56,9 @@ Pada soal ini, kita perlu mencari paket ke-130 sesuai permintaan soal, lalu pada
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 ## 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+Pada paragraf, huruf-huruf yang dikapital membentuk suatu kata **“SUBSTITUSI”**, lalu terdapat pula **"a1 e5 u21"**, yang menunjukkan bahwa tiap huruf dapat disubstitusi dengan angka sesuai urutan abjad. Maksud dari a1 e5 u21 yaitu a merupakan huruf ke-1, e merupakan huruf ke-5, dan u merupakan huruf ke-21. Lalu, pada pesan error terdapat **“SOURCE 7812”**, itu artinya file pcap paket ke-7812. Sekarang kita berfokus pada kata yang lain yaitu **"SOURCE ADDRESS"**, dimana kita dapat melihat ip source yang ada pada paket ke-7812. Kemudian, kita menghubungkan dari semua clue dan informasi yang kita dapat di atas. Selanjutnya dari ip source tersebut yaitu **“104 18 14 101”**, jika disubstitusi dari angka menjadi huruf sesuai urutan abjad dapat menjadi **"JDRNJA"**` (10 4 18 14 10 1).
+
+Jadi, solusi kode error tersebut yaitu ```JDRNJA```.
 
 ## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
 
