@@ -25,20 +25,25 @@ Dalam konteks ini, kita dapat mengidentifikasi aktivitas pengguna dengan melihat
   
   Dalam pertanyaan ini, kami diminta untuk menemukan nilai sequence number (raw) dari REQUEST STOR. Kita dapat mengakses nilai ini dengan mengamati bagian "Transmission       
   Control Protocol" dalam paket tersebut, dan nilai tersebut akan terdapat di dalamnya. Nilai sequence number (raw) dari REQUEST STOR yaitu ```258040667```.
+  ![](![Screenshot (4365)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/79dfc137-797a-445b-8f25-5bca339055f6))
+
  
 - **Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut?**
   
   Selanjutnya pada pertanyaan ini, pada bagian yang sama yaitu di REQUEST STOR dapat kita temukan nilai acknowledgment number (raw). Nilai acknowledgment number (raw) dari REQUEST STOR yaitu ```1044861039```
-  
+  ![](![Screenshot (4365)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/79dfc137-797a-445b-8f25-5bca339055f6))
+ 
 - **Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?**
 
   Dalam pertanyaan ini, kami diminta untuk menemukan nilai sequence number (raw) dari RESPONSE STOR. Kita dapat mengakses nilai ini dengan mengamati bagian "Transmission       
   Control Protocol" dalam paket tersebut, dan nilai tersebut akan terdapat di dalamnya. Nilai sequence number (raw) dari RESPONSE STOR yaitu ```1044861039```.
+  ![](![Screenshot (4406)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/87ef0234-f7f5-4a5e-97bd-e99b03b05e78))
   
 - **Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?**
 
   Selanjutnya pada pertanyaan ini, pada bagian yang sama yaitu di RESPONSE STOR dapat kita temukan nilai acknowledgment number (raw). Nilai acknowledgment number (raw) dari RESPONSE STOR yaitu 
   ```258040696```
+  ![](![Uploading Screenshot (4406).png…]())
  
 ## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Komputer, kita dapat menggunakan filter ```ip.addr == 10.21.78.111``` dalam file soal2. Filter ini digunakan untuk mengambil atau menampilkan paket-paket yang memiliki alamat IP tujuan atau sumber yang sesuai dengan alamat IP yang diberikan, dalam hal ini 10.21.78.111 (alamat ip portal praktikum Jaringan Komputer). Setelah itu, langkah berikutnya adalah mengklik kanan pada paket tersebut, lalu memilih opsi "Follow" dan memilih "TCP Stream". Ini akan membuka tampilan yang menunjukkan request yang telah terjadi, seperti yang diilustrasikan di bawah ini. Di sini, kita dapat melihat rincian server yang digunakan. Web server yang digunakan yaitu ```gunicorn```.
