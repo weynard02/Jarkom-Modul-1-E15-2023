@@ -19,11 +19,27 @@
 </table>
 
 ## 1. User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-- Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-- Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-- Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
-- Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+Dalam konteks ini, kita dapat mengidentifikasi aktivitas pengguna dengan melihat petunjuk yang diberikan, yaitu "mengunggah suatu file." Tindakan mengunggah file ini dapat dikaitkan dengan operasi         STORE pada komputer, oleh karena itu, kita dapat mencari paket dengan info STOR menggunakan perintah ```tcp contains "STOR"``` dan didapatkan request dan response yang relevan dengan request tersebut yaitu pada paket nomor 147 dan 149.
+  
+- **Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?**
+  
+  Dalam pertanyaan ini, kami diminta untuk menemukan nilai sequence number (raw) dari REQUEST STOR. Kita dapat mengakses nilai ini dengan mengamati bagian "Transmission       
+  Control Protocol" dalam paket tersebut, dan nilai tersebut akan terdapat di dalamnya. Nilai sequence number (raw) dari REQUEST STOR yaitu ```258040667```.
+ 
+- **Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut?**
+  
+  Selanjutnya pada pertanyaan ini, pada bagian yang sama yaitu di REQUEST STOR dapat kita temukan nilai acknowledgment number (raw). Nilai acknowledgment number (raw) dari REQUEST STOR yaitu ```1044861039```
+  
+- **Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?**
 
+  Dalam pertanyaan ini, kami diminta untuk menemukan nilai sequence number (raw) dari RESPONSE STOR. Kita dapat mengakses nilai ini dengan mengamati bagian "Transmission       
+  Control Protocol" dalam paket tersebut, dan nilai tersebut akan terdapat di dalamnya. Nilai sequence number (raw) dari RESPONSE STOR yaitu ```1044861039```.
+  
+- **Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?**
+
+  Selanjutnya pada pertanyaan ini, pada bagian yang sama yaitu di RESPONSE STOR dapat kita temukan nilai acknowledgment number (raw). Nilai acknowledgment number (raw) dari RESPONSE STOR yaitu 
+  ```258040696```
+ 
 ## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
