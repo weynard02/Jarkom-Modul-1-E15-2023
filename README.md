@@ -60,7 +60,9 @@ Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Kompu
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 - **Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?**
+- 
   Untuk dapat menemukan paket-paket tersebut, kita bisa menggunakan display filter
+  
   ```ip.dst == 239.255.255.250 && (tcp.port == 3702 || udp.port == 3702)```
   
   Penjelasan:
@@ -75,7 +77,8 @@ Untuk mengetahui web server yang digunakan dalam portal praktikum Jaringan Kompu
 
   Sehingga untuk menjawab pertanyaan ini, ada **21** paket yang tercapture
 
-- Protokol layer transport apa yang digunakan?
+- **Protokol layer transport apa yang digunakan?**
+  
   Jika dilihat dari hasil tersebut, semua paketnya menggunakan protokol **UDP**. Sehingga jawaban untuk pertanyaan ini adalah **UDP**
 
   ### Cara Alternatif
@@ -130,13 +133,13 @@ NWltcGxlUGFzNXdvcmQ=
 ![Screenshot 2023-09-18 211508](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/f9c6bb4a-d7de-4af1-b36d-87005925f4fa)
 
    
-- Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+- Berapa banyak packet yang berhasil di capture dari file pcap tersebut?\
   Berdasarkan pcapnya, ada 60 packet.\
   ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/1a69ea6a-e782-4fcf-b96b-d909321c9e8f)
 
-- Port berapakah pada server yang digunakan untuk service SMTP?
+- Port berapakah pada server yang digunakan untuk service SMTP?\
   Port ke 25 untuk SMTP
-- Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+- Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?\
   Satu-satunya public IP yang ditemukan dari pcap adalah `74.53.140.153`
 
   ### Capture Flag:
@@ -154,7 +157,7 @@ Jadi, solusi kode error tersebut yaitu ```JDRNJA```.
 ![Screenshot (4404)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/be305441-7c89-4470-b442-9099af43d317)
 
 ## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
-Kita bisa mencari paket-paket destinationnya dengan display filter 
+Untuk soal ini, kita bisa mencari paket-paket destinationnya dengan display filter 
 ```
 ip.dst == 184.87.193.88
 ```
@@ -199,13 +202,13 @@ Dengan menggunakan query ini, kita akan melihat hanya paket-paket yang berasal d
 ![Screenshot (4371)](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/106955551/67c3b2a9-c186-4950-ab1b-201e555e322a)
 
 ## 10. Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
-Kita bisa melakukan filter `telnet` pada pcap
+Pertama, kita bisa melakukan filter `telnet` pada pcap
 ![Screenshot 2023-09-18 195758](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/8566e715-aec0-414e-933a-c482e335edf2)
 
 Kemudian ditemukan jawaban [username]:[password]. Untuk lebih jelasnya, dapat difollow TCP Stream
 ![Screenshot 2023-09-18 215611](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/46fb7a48-f3cd-464f-ae24-5bb136e92c20)
 
-Untuk meyakinkan ini yang digunakan untuk login, bisa dengan filter `telnet contains "Login"` dapat ditemukan TCP Stream berikut\
+Untuk meyakinkan bahwa kredensial ini yang digunakan untuk login, bisa dengan filter `telnet contains "Login"` dapat ditemukan TCP Stream berikut\
 ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/980b4ed7-4c21-4dd4-bad7-c1f2d0d3a8ae)
 
 Jawaban: **dhafin:kesayangannyak0k0**
@@ -216,4 +219,4 @@ Jawaban: **dhafin:kesayangannyak0k0**
 ## Kendala:
 - Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal).
 - Untuk soal 6, kesulitan dan membutuhkan waktu lama untuk menemukan clue dan informasi yang dibutuhkan untuk memecahkan solusi soal tersebut (minimnya clue pada soal).
-- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial itu berada di pesan "Login...".
+- Untuk soal 10, sempat bingung karena ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar. Yang benar adalah kredensial itu berada di pesan "Login...".
