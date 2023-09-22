@@ -27,15 +27,82 @@
 ## 2. Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ## 3. Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
-- Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+- **Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?**
+  Untuk dapat menemukan paket-paket tersebut, kita bisa menggunakan display filter
+  ```ip.dst == 239.255.255.250 && (tcp.port == 3702 || udp.port == 3702)```
+  
+  Note:
+  - port dimiliki oleh tcp atau udp
+  - Di sini lgsg menunjukan destination address 239.255.255.250 karena saat dicek source address `ip.src == 239.255.255.250` tidak ditemukan sebuah paket sehingga langsung menunjukkan `ip.dst` saja
+    ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/0e036c0a-7bbc-4e5d-bfed-17d2f95b5779)
+
+  Ditemukan hasil sebagai berikut:\
+    ![Screenshot 2023-09-18 193722](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b4ec4860-5296-46c3-8eb1-ed444abe4ae1)
+
+  Sehingga untuk menjawab pertanyaan ini, ada **21** paket yang tercapture
+
 - Protokol layer transport apa yang digunakan?
+  Jika dilihat dari hasil tersebut, semua paketnya menggunakan protokol **UDP**. Sehingga jawaban untuk pertanyaan ini adalah **UDP**
+
+  ### Cara Alternatif
+  Kita bisa memanfaatkan fitur Wireshark: Statistics -> IPv4 Statistics -> Destinations and Ports
+
+  Di sana telah ketahuan berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702 beserta Protokol Layer Transport yang digunakan
+
+  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/bd1ced08-2bc1-4349-a8dd-49463b391127)
+
+  
+  ### Capture Flag:
+  ![Screenshot 2023-09-18 194032](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/df5e8d8c-8bcb-490e-a2c1-f636a05efa86)
+
 
 ## 4. Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
 ## 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+   Soal ini menyediakan juga zip file yang di mana perlu mencari passwordnya terlebih dahulu\
+   ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/269788d2-38d1-4b67-9d2b-128d28df2812)
+   ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b0b37ea7-a7e1-4532-bb2a-bae45812a32d)
+
+   Password dapat ditemukan melalui pcap sebagai berikut:
+
+   Langkah pertama, kita dapat melakukan filter `SMTP` terlebih dahulu, kemudian karena setiap paket mengandung pesan, kita dapat membukanya melalui follow TCP Stream:
+   ![Screenshot 2023-09-18 211426](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/a1bfed7e-d435-4f68-8554-606e77a83677)
+    ![Screenshot 2023-09-18 211438](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/d1537e26-40d0-4fdf-bfed-dc49ed2cd04b)
+
+   Di sana ada suatu paragraf yang menyatakan password untuk zip
+   ```
+   I send u a p45sword of a zip file, but you should decode it in Base64.
+
+Here is the p45sword:
+
+NWltcGxlUGFzNXdvcmQ=
+   ```
+
+  Akan tetapi, password itu perlu didecode terlebih dahulu (base64). Kita bisa memanfaatkan command Linux:
+  ```
+    echo NWltcGxlUGFzNXdvcmQ= | bas64 --decode
+  ```
+   Sehingga didapatkan passwordnya `5implePas5word`\
+   ![Screenshot 2023-09-18 211244](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b29d5fec-c5f5-404c-8e54-bb560d191e82)
+
+   Langkah berikutnya, kita dapat memasukkan password untuk zip itu dan menemukan file `connect.txt` yang berisi nc untuk menjawab pertanyaan-pertanyaan selanjutnya
+
+   Isi file:\
+![Screenshot 2023-09-18 211508](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/f9c6bb4a-d7de-4af1-b36d-87005925f4fa)
+
+   
 - Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+  Berdasarkan pcapnya, ada 60 packet.\
+  ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/1a69ea6a-e782-4fcf-b96b-d909321c9e8f)
+
 - Port berapakah pada server yang digunakan untuk service SMTP?
+  Port ke 25 untuk SMTP
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+  Public IPnya adalah `74.53.140.153`
+
+  ### Capture Flag:
+  ![Screenshot 2023-09-18 211451](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/efcf2755-40ba-4e8a-a454-4566c2c3e765)
+
 
 ## 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
