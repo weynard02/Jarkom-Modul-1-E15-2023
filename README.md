@@ -214,5 +214,6 @@ Jawaban: **dhafin:kesayangannyak0k0**
 ![Screenshot 2023-09-18 195712](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/b0cfe3b3-eb1b-457f-9176-5afb3372ebcd)
 
 ## Kendala:
-- Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal)
-- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial itu berada di pesan "Login..."
+- Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal).
+- Untuk soal 6, kesulitan dan membutuhkan waktu lama untuk menemukan clue dan informasi yang dibutuhkan untuk memecahkan solusi soal tersebut (minimnya clue pada soal).
+- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial itu berada di pesan "Login...".
