@@ -138,6 +138,8 @@ Kita bisa melakukan filter `telnet` pada pcap
 
 Kemudian ditemukan jawaban [username]:[password]. Untuk lebih jelasnya, dapat difollow TCP Stream
 ![Screenshot 2023-09-18 215611](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/46fb7a48-f3cd-464f-ae24-5bb136e92c20)
+
+Untuk meyakinkan ini yang digunakan untuk login, bisa dengan filter `telnet contains "Login"` dapat ditemukan TCP Stream berikut\
 ![image](https://github.com/weynard02/Jarkom-Modul-1-E15-2023/assets/90879937/980b4ed7-4c21-4dd4-bad7-c1f2d0d3a8ae)
 
 Jawaban: **dhafin:kesayangannyak0k0**
@@ -147,5 +149,5 @@ Jawaban: **dhafin:kesayangannyak0k0**
 
 ## Kendala:
 - Untuk soal 5, membutuhkan waktu lama untuk kepikiran bahwa password untuk zip berada di file pcap itu sendiri (bukan jawaban soal)
-- Untuk soal 10, ada banyak kombinasi yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial yang di-login
+- Untuk soal 10, ada banyak kombinasi [username]:[password] yang kemungkinan bisa menjadi jawaban sehingga perlu mencari mana yang benar, yang benar adalah kredensial yang di-login
 
